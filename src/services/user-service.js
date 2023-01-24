@@ -18,6 +18,10 @@ class UserService{
         }
     }
 
+    createToken(user)
+    {
 
+        
+    }
 }
 module.exports = UserService;
