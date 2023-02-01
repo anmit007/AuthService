@@ -24,7 +24,7 @@ class UserService{
         try {
             //fetch the user email
             const user = await this.UserRepository.getbyEmail(email);
-            // compare incomming plain password with stored encrypted password
+            // compare incoming plain password with stored encrypted password
             const passwordMatch = this.checkPassword(plainPassword,user.password);
             if(!passwordMatch)
             {

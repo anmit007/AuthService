@@ -5,6 +5,8 @@ const apiRoutes = require('./routes/index');
 const app =  express();
 const UserService = require('./services/user-service');
 const db = require('./models/index');
+
+
 const prepareAndStartServer = () =>
 {
     app.use(bodyParser.json());
