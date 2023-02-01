@@ -22,11 +22,10 @@ router.get(
 
 )
 router.get(
-    '/dummy',(req,res) =>{
-        return res.status(200).json({message:'OK'});
-    }
-   
-    
+    '/isAdmin',
+    AuthRequestvalidator.validateIsAdminRequest,
+    UserController.isAdmin,
 )
+
 
 module.exports = router;

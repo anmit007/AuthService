@@ -15,6 +15,20 @@ if(!req.body.email || !req.body.password)
 next();
 }
 
+const validateIsAdminRequest = (req,res,next) =>{
+    if(!req.body.id)
+    {
+        return res.status.json({
+            success : false,
+            data : {},
+            err : 'userId not given',
+            message : 'something went wrong'
+        })
+    }
+    next();
+}
+
 module.exports = {
     validateUserAuth,
+    validateIsAdminRequest
 }
